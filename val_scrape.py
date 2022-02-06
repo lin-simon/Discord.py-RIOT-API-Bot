@@ -1,5 +1,4 @@
 import discord
-import selenium.common.exceptions
 from selenium import webdriver
 from selenium.webdriver.chrome.options import Options
 
@@ -23,16 +22,16 @@ class Embed:
         self.url = url
 
         self.colour = 0xff2400
-        self.icon = "https://static.wikia.nocookie.net/leagueoflegends/images/8/88/Valorant_icon.png/revision/latest?cb=20210118012928"
 
 
-def val(username):
+async def val(username, region='na1'):
     user = username
+    username = username + '%23' + region
     username = username.replace(" ", "%20")
-    username = username.replace("#", "%23")
     url = f'https://tracker.gg/valorant/profile/riot/{username}/overview?playlist=competitive&season=all'
+    webdriver.implicitly_wait(5)
     webdriver.get(url)
-
+    
     rank = webdriver.find_element_by_css_selector('#app > div.trn-wrapper > div.trn-container > div > main > div.content.no-card-margin > div.site-container.trn-grid.trn-grid--vertical.trn-grid--small > div.trn-grid.container > div.segment-stats.area-main-stats.card.bordered.header-bordered.responsive > div.highlighted.highlighted--giants > div.highlighted__content > div > div.valorant-highlighted-content__stats > img')
     wins = webdriver.find_element_by_css_selector('#app > div.trn-wrapper > div.trn-container > div > main > div.content.no-card-margin > div.site-container.trn-grid.trn-grid--vertical.trn-grid--small > div.trn-grid.container > div.segment-stats.area-main-stats.card.bordered.header-bordered.responsive > div.main > div.stat.align-left.expandable.feature-hint > div > div.numbers > span.value')
     winrate = webdriver.find_element_by_css_selector('#app > div.trn-wrapper > div.trn-container > div > main > div.content.no-card-margin > div.site-container.trn-grid.trn-grid--vertical.trn-grid--small > div.trn-grid.container > div.segment-stats.area-main-stats.card.bordered.header-bordered.responsive > div.giant-stats > div:nth-child(4) > div > div.numbers > span.value')
@@ -61,6 +60,6 @@ def val(username):
     val_embed.set_image(url=embed.rank)
     val_embed.set_thumbnail(url=banner.get_attribute('href'))
     val_embed.set_footer(text=f"Most played agent: {embed.agent_name} - {embed.playtime}", icon_url=embed.agent)
-    val_embed.set_author(name=embed.username, url=embed.url, icon_url=embed.icon)
+    val_embed.set_author(name=embed.username, url=embed.url, icon_url="https://static.wikia.nocookie.net/leagueoflegends/images/8/88/Valorant_icon.png/revision/latest?cb=20210118012928")
 
     return val_embed
