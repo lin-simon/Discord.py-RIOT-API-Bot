@@ -15,7 +15,6 @@ TOKEN = os.getenv('bot_token')
 
 @client.event
 async def on_ready():
-    await client.change_presence(activity=discord.Game(name="straightest jojo fan"))
     print(f'{client.user} has connected to Discord!')
 
 
