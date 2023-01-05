@@ -1,5 +1,5 @@
 # Discord.py RIOT API Bot
-This is a Discord bot built using Discord.py and the RIOT API for League of Legends. It allows users to look up information about their summoner and view their ranked stats in the game.
+This is a Discord bot built using [Discord.py](https://discordpy.readthedocs.io/en/latest/) and the RIOT GAMES API for online games League of Legends and VALORANT. It allows users to look up information about their account and view their normally inaccesible ranked stats in the game. The bot uses both RIOT API to read stats from JSON files and Selenium.py for webscraping various game assets to produce a visually appealing embedded display on discord.
 
 # Prerequisites
 To use this bot, you will need:
