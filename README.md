@@ -9,6 +9,7 @@ A RIOT API key
 
 # Setting up
 To set up the bot, follow these steps:
+
 ```
 Clone the repository: git clone https://github.com/lin-simon/Discord.py-RIOT-API-Bot.git
 Navigate to the directory: cd Discord.py-RIOT-API-Bot
@@ -24,7 +25,7 @@ Run the bot: python bot.py
 # Usage
 This bot uses slash commands, a new feature of discord.py. Ensure you have downloaded the latest version of discord.py or version 2.0+.
 
-To use the bot, type /val or /league <user_id> <region> in a Discord channel where the bot has been added and provided permissions. The bot will return information about the RIOT ID, including their ranked stats and other player information for the current season.
+To use the bot, type /val or /league <user_id> <region_name> in a Discord channel where the bot has been added and provided permissions. The bot will return information about the RIOT ID, including their ranked stats and other player information for the current season.
 
 # Customization
 To customize the bot, you can edit the bot.py file and add additional commands using the Discord.py library. You can also edit the .env file to add additional environment variables.
