@@ -1,5 +1,5 @@
 # Discord.py RIOT API Bot
-This is a Discord bot built using [Discord.py](https://discordpy.readthedocs.io/en/latest/) and the RIOT GAMES API for online games League of Legends and VALORANT. It allows users to look up information about their account and view their normally inaccesible ranked stats in the game. The bot uses both RIOT API to read stats from JSON files and Selenium.py for webscraping various game assets to produce a visually appealing embedded display on discord.
+This is a Discord bot built using [Discord.py](https://discordpy.readthedocs.io/en/latest/) and the [RIOT GAMES API](https://developer.riotgames.com/apis) for online games League of Legends and VALORANT. It allows users to look up information about their account and view their normally inaccesible ranked stats in the game. The bot uses both RIOT API to read stats from JSON files and Selenium.py for webscraping various game assets to produce a visually appealing embedded display on discord.
 
 # Prerequisites
 To use this bot, you will need:
@@ -11,15 +11,15 @@ A RIOT API key
 To set up the bot, follow these steps:
 
 ```
-Clone the repository: **git clone https://github.com/lin-simon/Discord.py-RIOT-API-Bot.git**
-Navigate to the directory: **cd Discord.py-RIOT-API-Bot**
-Install the dependencies: **pip install -r requirements.txt**
+Clone the repository: git clone https://github.com/lin-simon/Discord.py-RIOT-API-Bot.git
+Navigate to the directory: cd Discord.py-RIOT-API-Bot
+Install the dependencies: pip install -r requirements.txt
 
 Create a file called **.env** and add your Discord and RIOT API keys in the following format:
-**DISCORD_TOKEN=your_discord_token**
-**RIOT_API_KEY=your_riot_api_key**
+DISCORD_TOKEN=your_discord_token
+RIOT_API_KEY=your_riot_api_key
 
-Run the bot: **python bot.py**
+Run the bot: python bot.py
 ```
 
 # Usage
